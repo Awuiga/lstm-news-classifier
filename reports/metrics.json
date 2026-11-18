@@ -1,0 +1,177 @@
+{
+  "evaluation_date": "2026-11-18",
+  "classes": [
+    "World",
+    "Sports",
+    "Business",
+    "Sci/Tech"
+  ],
+  "train_samples": 96000,
+  "validation": {
+    "samples": 24000,
+    "accuracy": 0.905,
+    "cross_entropy_per_news": 0.2830637542307377,
+    "classification_report": {
+      "World": {
+        "precision": 0.9096102150537635,
+        "recall": 0.9023333333333333,
+        "f1-score": 0.9059571619812584,
+        "support": 6000.0
+      },
+      "Sports": {
+        "precision": 0.9596801066311229,
+        "recall": 0.96,
+        "f1-score": 0.959840026662223,
+        "support": 6000.0
+      },
+      "Business": {
+        "precision": 0.8535385591875595,
+        "recall": 0.8965,
+        "f1-score": 0.8744919525280442,
+        "support": 6000.0
+      },
+      "Sci/Tech": {
+        "precision": 0.8995473537604457,
+        "recall": 0.8611666666666666,
+        "f1-score": 0.8799386920980926,
+        "support": 6000.0
+      },
+      "accuracy": 0.905,
+      "macro avg": {
+        "precision": 0.905594058658223,
+        "recall": 0.905,
+        "f1-score": 0.9050569583174046,
+        "support": 24000.0
+      },
+      "weighted avg": {
+        "precision": 0.9055940586582228,
+        "recall": 0.905,
+        "f1-score": 0.9050569583174046,
+        "support": 24000.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        5414,
+        158,
+        276,
+        152
+      ],
+      [
+        119,
+        5760,
+        67,
+        54
+      ],
+      [
+        208,
+        42,
+        5379,
+        371
+      ],
+      [
+        211,
+        42,
+        580,
+        5167
+      ]
+    ]
+  },
+  "test": {
+    "samples": 7600,
+    "accuracy": 0.901578947368421,
+    "cross_entropy_per_news": 0.303900882131175,
+    "classification_report": {
+      "World": {
+        "precision": 0.9104872881355932,
+        "recall": 0.9047368421052632,
+        "f1-score": 0.9076029567053854,
+        "support": 1900.0
+      },
+      "Sports": {
+        "precision": 0.9543067226890757,
+        "recall": 0.9563157894736842,
+        "f1-score": 0.955310199789695,
+        "support": 1900.0
+      },
+      "Business": {
+        "precision": 0.8467661691542289,
+        "recall": 0.8957894736842106,
+        "f1-score": 0.8705882352941177,
+        "support": 1900.0
+      },
+      "Sci/Tech": {
+        "precision": 0.8976640711902113,
+        "recall": 0.8494736842105263,
+        "f1-score": 0.8729042725797729,
+        "support": 1900.0
+      },
+      "accuracy": 0.901578947368421,
+      "macro avg": {
+        "precision": 0.9023060627922773,
+        "recall": 0.901578947368421,
+        "f1-score": 0.9016014160922428,
+        "support": 7600.0
+      },
+      "weighted avg": {
+        "precision": 0.9023060627922772,
+        "recall": 0.901578947368421,
+        "f1-score": 0.9016014160922426,
+        "support": 7600.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        1719,
+        49,
+        83,
+        49
+      ],
+      [
+        40,
+        1817,
+        23,
+        20
+      ],
+      [
+        65,
+        18,
+        1702,
+        115
+      ],
+      [
+        64,
+        20,
+        202,
+        1614
+      ]
+    ]
+  },
+  "parameters": 4236292,
+  "configuration": {
+    "vocab_size": 30000,
+    "embedding_dim": 128,
+    "hidden_size": 256,
+    "num_classes": 4,
+    "max_length": 64
+  },
+  "checkpoint_sha256": "1a4734f5e6da0381d4c8c3829b274923a7396827367a28c9660c7d6522d7730b",
+  "normalized_csv_sha256": {
+    "train.csv": "76a0a2d2f92b286371fe4d4044640910a04a803fdd2538e0f3f29a5c6f6b672e",
+    "test.csv": "521465c2428ed7f02f8d6db6ffdd4b5447c1c701962353eb2c40d548c3c85699"
+  },
+  "environment": {
+    "python": "3.13.2",
+    "torch": "2.10.0+cu126",
+    "pandas": "3.1.1",
+    "sklearn": "1.9.1",
+    "device": "cuda"
+  },
+  "notes": [
+    "Existing complete checkpoint evaluated without training or tuning.",
+    "Validation reconstructed with stratified train_test_split, random_state 42.",
+    "Entire train vocabulary exactly matched saved stoi.",
+    "Checkpoint has no dataset hash, training indices or epoch metadata.",
+    "No guarantee that test had never been inspected in earlier development."
+  ]
+}
