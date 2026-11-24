@@ -1,5 +1,7 @@
 # LSTM News Classifier
 
+**Русский** · [English](README.en.md)
+
 Учебный классификатор англоязычных новостей на PyTorch. Модель читает заголовок и описание новости и выбирает тему: **World, Sports, Business или Sci/Tech**.
 
 Проект включает подготовку словаря, Dataset и DataLoader, обучение LSTM, сохранение лучших весов по validation loss и оценку на официальном test AG News. Это отдельный проект, не часть Fashion CNN или GRU Text Generator.
